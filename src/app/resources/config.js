@@ -1,4 +1,4 @@
-const baseURL = "sylvaincostes.fr";
+const baseURL = "https://sylvaincostes.fr";
 
 const routes = {
   "/": true,
