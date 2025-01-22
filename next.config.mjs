@@ -7,6 +7,8 @@ const withMDX = mdx({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+
   pageExtensions: ["ts", "tsx", "md", "mdx"],
 };
 

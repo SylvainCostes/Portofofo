@@ -1,70 +1,63 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Sylvain",
+  lastName: "Costes",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Full Stack Engineer • Étudiant MIAGE",
+  avatar: "/images/avatarss.png", // à remplacer par ton URL d'avatar si nécessaire
+  location: "Europe/Paris",
+  languages: ["Français", "Anglais"],
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>S'abonner à ma Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Découvrez mes réflexions sur le développement, le Cloud, et l'innovation technologique.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/sylvaincs",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/SylvainCostes",
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:sylcos@proton.me",
   },
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  label: "Accueil",
+  title: `${person.name} • Portfolio & Expériences`,
+  description: `Profil LinkedIn de ${person.name} – ${person.role}`,
+  headline: <>Étudiant en informatique passionné par le développement, le Cloud et l’innovation</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Bonjour, je suis {person.firstName} et je développe des solutions innovantes chez Optic 2000,
+      tout en poursuivant mes études en MIAGE. <br />
+      Je partage ici mes projets, expériences et compétences en Full Stack, DevOps et Cloud.
     </>
   ),
 };
 
 const about = {
-  label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: "Profil & Parcours",
+  description: `Découvrez le parcours de ${person.name} : étudiant MIAGE, Full Stack Engineer, et passionné par la technologie.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -74,140 +67,159 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/costes", // si tu souhaites ajouter un lien pour prendre rendez-vous
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "À propos de moi",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Étudiant en informatique passionné par le développement et les technologies Cloud, je suis motivé
+        par les défis techniques et l'innovation. Mon objectif est de continuer à développer mes compétences
+        en développement, DevOps et en architecture technique, tout en contribuant à des projets d'envergure.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Expériences Professionnelles",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Audioptic Trade Services",
+        timeframe: "sept. 2024 - aujourd’hui · 5 mois",
+        role: "Full Stack Engineer (Contrat en alternance)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Développement d'applications Full Stack serverless sur AWS,
+            mise en place d'un pipeline DevOps avec Terraform et Bitbucket.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Automatisation des tests avec Cypress, et implémentation d'un SSO via Okta en OIDC.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/cover-02.jpg", // à remplacer par une image pertinente
+            alt: "Optic 2000",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Réalisation de projet personnel",
+        timeframe: "Never Ending ∞",
+        role: "Solution Architect",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Réalisation de divers projets personnels en Full Stack.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Stage chez Optic 2000",
+        timeframe: "avril 2024 - août 2024 · 5 mois",
+        role: "Full-Stack Developer",
+        achievements: [
+          <>Développement Full-Stack en serverless</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Parcours Académique",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Université Paris-X",
+        description: (
+          <>
+            Master en informatique (MIAGE) – Axé sur la gestion et la transformation digitale. Spé DevOps
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Université Paris 12",
+        description: (
+          <>
+            Licence en Informatique – Activités associatives : Club de Cinéma, CrossFit, Savate boxe française.
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Compétences Techniques",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Java, Spring Boot & Lombok",
+        description: <>Développement d'applications robustes pour le back-end.</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "React / Next.js / TypeScript",
+        description: <>Création d'interfaces modernes et responsives.</>,
+        images: [],
+      },
+      {
+        title: "AWS & DevOps",
+        description: <>Déploiement sur le Cloud avec AWS (Lambda, S3, etc.), Docker, Terraform, et CI/CD.</>,
+        images: [],
+      },
+    ],
+  },
+  certifications: {
+    display: true,
+    title: "Certifications & Formations",
+    items: [
+      {
+        title: "AWS Certified Cloud Practitioner",
+        description: (
+          <>
+            Certification AWS CLF-C01 – Praticien du Cloud certifié AWS
+          </>
+        ),
+        date: "juil. 2024 · juil. 2027",
+        issuer: "Amazon Web Services (AWS)",
+        image: "/images/certificates/ccpp.png",
+        pdfLink: "https://www.credly.com/badges/e4ebd475-8f41-4b27-8c12-3af69b9d8be0/public_url",
+      },
+      {
+        title: "AWS Certified Solutions Architect – Associate",
+        description: (
+          <>
+            Certification AWS SAA-C02 – Architecte de solutions certifié AWS
+          </>
+        ),
+        date: "En cours",
+        issuer: "Amazon Web Services (AWS)",
+        image: "/trademark/aws.svg",
+        pdfLink: "https://www.credly.com/badges/e4ebd475-8f41-4b27-8c12-3af69b9d8be0/public_url",
       },
     ],
   },
 };
 
 const blog = {
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Articles",
+  title: "Mes réflexions & tutoriels",
+  description: `Retrouvez les articles et projets partagés par ${person.name}.`,
+  // Pour créer un nouvel article, ajoutez un fichier .mdx dans le dossier approprié.
 };
 
 const work = {
-  label: "Work",
-  title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Projets",
+  title: "Mes Réalisations",
+  description: `Découvrez les projets réalisés par ${person.name} durant mon parcours en développement et DevOps.`,
+  // Pour ajouter un nouveau projet, créez un fichier .mdx dans le dossier dédié.
 };
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
+  title: "Galerie Photo",
   description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  // Images tirées de pexels.com ou autres sources
   images: [
     {
       src: "/images/gallery/img-01.jpg",

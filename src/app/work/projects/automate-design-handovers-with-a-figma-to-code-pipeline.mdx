@@ -1,44 +1,46 @@
 ---
-title: "Automating Design Handovers with a Figma to Code Pipeline"
-publishedAt: "2024-04-01"
-summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+title: "Interface utilisateur pour une plateforme de streaming IPTV"
+publishedAt: "2024-06-10"
+summary: "Découvrez comment nous avons conçu une application front-end moderne en React pour offrir une expérience de streaming IPTV fluide et intuitive."
 images:
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/image-03.jpg"
+  - "/images/projects/iptvcon.png"
+  - "/images/projects/iptvtable.png"
 team:
-  - name: "John Doe"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-link: "https://once-ui.com/"
+  - name: "Sylvain Costes"
+    role: "Développeur Front-End"
+    avatar: "/images/avatarss.png"
+link: "https://github.com/SylvainCostes/iptv"
 ---
 
-## Overview
+## Vue d'ensemble
 
-In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
+Ce projet avait pour objectif de développer une interface utilisateur moderne pour une plateforme de streaming IPTV. L'idée principale était de concevoir une application front-end réactive et performante qui permette aux utilisateurs de naviguer facilement parmi des centaines de chaînes et contenus à la demande. En exploitant React, une architecture modulaire et une intégration d'API robuste, nous avons réussi à créer une expérience utilisateur exceptionnelle.
 
-## Key Features
+## Fonctionnalités clés
 
-- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
-- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
-- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
-- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+- **Navigation Intuitive** : Développement d'une interface claire et ergonomique permettant une navigation fluide entre les chaînes, les catégories et les émissions enregistrées.
+- **Lecteur Multimédia Intégré** : Implémentation d'un lecteur vidéo hautement personnalisable, prenant en charge les formats les plus courants et la reprise automatique des vidéos.
+- **Gestion des Favoris** : Ajout d’une fonctionnalité pour permettre aux utilisateurs de sauvegarder leurs chaînes et émissions préférées pour un accès rapide.
+- **Support Multilingue** : Intégration d'un système i18n pour supporter plusieurs langues et adapter l'application à une audience internationale.
+- **Mode Sombre et Clair** : Conception d’un thème dynamique permettant aux utilisateurs de basculer facilement entre un mode sombre et un mode clair.
 
-## Technologies Used
+## Technologies utilisées
 
-- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
-- **React and Next.js**: For building the front-end codebase with clean, reusable components.
-- **Styled-Components**: For managing styles dynamically using design tokens.
-- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+- **React et Vite** : Pour une expérience de développement rapide et une interface utilisateur réactive.
+- **Redux Toolkit** : Pour gérer l’état global et synchroniser les données des chaînes et des utilisateurs.
+- **Material-UI (MUI)** : Pour accélérer le développement de composants avec une esthétique professionnelle.
+- **HLS.js** : Pour la gestion du streaming en direct via HTTP Live Streaming.
+- **Docker** : Pour déployer facilement l’application en environnement de production.
+- **GitHub Actions** : Pour automatiser les tests et les déploiements continus.
 
-## Challenges and Learnings
+## Défis et enseignements
 
-One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+Le principal défi consistait à gérer les performances en streaming en direct, particulièrement pour les utilisateurs disposant d'une connexion Internet instable. Cela a nécessité une optimisation du lecteur HLS et la mise en place d’un système de mise en cache côté client. De plus, garantir une expérience fluide sur différents appareils (smartphones, tablettes, smart TVs) a impliqué des tests approfondis et des ajustements CSS complexes.
 
-## Outcome
+## Résultats
 
-The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
+Grâce à cette application, le client a pu lancer une plateforme de streaming moderne qui a rapidement séduit les utilisateurs. L’expérience utilisateur améliorée a permis d’augmenter l’engagement, avec une hausse de 25% des utilisateurs actifs mensuels dès le premier mois. Ce projet met en valeur une parfaite synergie entre design et technologie, tout en répondant aux besoins spécifiques des consommateurs de contenu IPTV.
 
 ---
 
-This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
+Ce projet illustre votre expertise en React et en développement front-end, ainsi que votre capacité à relever des défis techniques dans un domaine compétitif comme le streaming en ligne.

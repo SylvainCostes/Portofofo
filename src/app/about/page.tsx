@@ -14,7 +14,7 @@ import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
-
+import {LogoCloud} from "@/once-ui/components/LogoCloud";
 export async function generateMetadata() {
   const title = about.title;
   const description = about.description;
@@ -66,6 +66,11 @@ export default function About() {
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
     },
+    {
+      title: "Certifications",
+      display: about.certifications.display,
+      items: about.certifications.items.map((cert) => cert.title)
+    }
   ];
   return (
     <Column maxWidth="m">
@@ -154,7 +159,7 @@ export default function About() {
                 vertical="center"
               >
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
+                <Flex paddingX="8">Contactez-moi ici.</Flex>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
@@ -274,6 +279,54 @@ export default function About() {
               </Column>
             </>
           )}
+          {about.certifications.display && (
+            <>
+              <Heading
+                as="h2"
+                id="certifications"
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                Certifications
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.certifications.items.map((cert, index) => (
+                  <Column key={`${cert.title}-${index}`} fillWidth gap="4">
+                    <Flex
+                      fillWidth
+                      horizontal="space-between"
+                      vertical="center"
+                    >
+                      <Heading variant="heading-strong-l">
+                        {cert.title}
+                      </Heading>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {cert.date}
+                      </Text>
+                    </Flex>
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                      {cert.issuer}
+                    </Text>
+                    <Flex gap="8" vertical="center">
+                      <SmartImage
+                        enlarge
+                        alt={cert.title}
+                        src={cert.image}
+                        objectFit="contain"
+                      />
+                      <Button
+                        href={cert.pdfLink}
+                        label="Voir le certificat (Credly)"
+                        variant="secondary"
+                        size="s"
+                      />
+                    </Flex>
+                  </Column>
+                ))}
+
+              </Column>
+            </>
+          )}
 
           {about.technical.display && (
             <>
@@ -285,37 +338,185 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
-              </Column>
+              <LogoCloud
+  limit={8}
+  fillWidth
+  logos={[
+    // ***************************
+    // Cloud & DevOps
+    // ***************************
+    {
+      // AWS
+      href: 'https://aws.amazon.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/aws.svg'
+    },
+    {
+      // DigitalOcean
+      href: 'https://www.digitalocean.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/digital.svg'
+    },
+    {
+      // Docker
+      href: 'https://hub.docker.com/',
+      icon: false,
+      size: 'l',
+      wordmarkSrc: '/trademark/docker.svg'
+    },
+    {
+      // AWS Lambda
+      href: 'https://aws.amazon.com/lambda/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/lambda.svg'
+    },
+    {
+      // Terraform
+      href: 'https://www.terraform.io/',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/trademark/terraform.svg'
+    },
+
+    // ***************************
+    // Collaboration & Versioning
+    // ***************************
+    {
+      // Atlassian
+      href: 'https://www.atlassian.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/atlassian.svg'
+    },
+    {
+      // Jira
+      href: 'https://www.atlassian.com/software/jira',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/jira.svg'
+    },
+    {
+      // Git
+      href: 'https://git-scm.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/git.svg'
+    },
+    {
+      // GitLab
+      href: 'https://about.gitlab.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/gitlab.svg'
+    },
+
+    // ***************************
+    // Développement & Frameworks
+    // ***************************
+    {
+      // Bash
+      href: 'https://www.gnu.org/software/bash/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/bash.svg'
+    },
+    {
+      // JavaScript
+      href: 'https://www.javascript.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/js.svg'
+    },
+    {
+      // Laravel
+      href: 'https://laravel.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/laravel.svg'
+    },
+    {
+      // SY (à ajuster selon le site officiel réel)
+      href: 'https://www.sysite.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/sy.svg'
+    },
+    {
+      // Node.js
+      href: 'https://nodejs.org/',
+      icon: false,
+      size: 'l',
+      wordmarkSrc: '/trademark/node.svg'
+    },
+    {
+      // PHP
+      href: 'https://www.php.net/',
+      icon: false,
+      size: 'l',
+      wordmarkSrc: '/trademark/php.svg'
+    },
+    {
+      // Python
+      href: 'https://www.python.org/',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/trademark/python.svg'
+    },
+    {
+      // Spring
+      href: 'https://spring.io/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/spring.svg'
+    },
+    {
+      // React
+      href: 'https://reactjs.org/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/reacts.svg'
+    },
+
+    // ***************************
+    // Outils & Infrastructures
+    // ***************************
+    {
+      // Figma
+      href: 'https://www.figma.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/figma.svg'
+    },
+    {
+      // MySQL
+      href: 'https://www.mysql.com/',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/trademark/mysql.svg'
+    },
+    {
+      // Postman
+      href: 'https://www.postman.com/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/postman.svg'
+    },
+    {
+      // Linux
+      href: 'https://www.linux.org/',
+      icon: false,
+      size: 'm',
+      wordmarkSrc: '/trademark/linux.svg'
+    }
+
+  ]}
+  columns="4"
+  mobileColumns="2"
+/>
+
             </>
           )}
         </Column>
