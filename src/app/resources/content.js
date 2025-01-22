@@ -99,7 +99,7 @@ const about = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg", // à remplacer par une image pertinente
+            src: "/images/projects/project-01/logo.jpg", // à remplacer par une image pertinente
             alt: "Optic 2000",
             width: 16,
             height: 9,
