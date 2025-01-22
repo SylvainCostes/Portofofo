@@ -44,12 +44,12 @@ const home = {
   label: "Accueil",
   title: `${person.name} • Portfolio & Expériences`,
   description: `Profil LinkedIn de ${person.name} – ${person.role}`,
-  headline: <>Étudiant en informatique passionné par le développement, le Cloud et l’innovation</>,
+  headline: <>Full-Stack Engineer and builder</>,
   subline: (
     <>
-      Bonjour, je suis {person.firstName} et je développe des solutions innovantes chez Optic 2000,
-      tout en poursuivant mes études en MIAGE. <br />
-      Je partage ici mes projets, expériences et compétences en Full Stack, DevOps et Cloud.
+      Je suis {person.firstName} et je développe des solutions innovantes chez Optic 2000,
+      tout en poursuivant mes études en MIAGE le jour. La nuit, je construit mes propres projets.
+      
     </>
   ),
 };
