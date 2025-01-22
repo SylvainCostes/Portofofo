@@ -47,7 +47,7 @@ const home = {
   headline: <>Full-Stack Engineer and builder</>,
   subline: (
     <>
-      Je suis {person.firstName} et je développe des solutions innovantes chez Optic 2000,
+      Mon prénom est {person.firstName} et je développe des solutions innovantes chez <InlineCode>Optic 2000</InlineCode>,
       tout en poursuivant mes études en MIAGE le jour. La nuit, je construit mes propres projets.
       
     </>
@@ -56,7 +56,7 @@ const home = {
 
 const about = {
   label: "À propos",
-  title: "Profil & Parcours",
+  title: "About me",
   description: `Découvrez le parcours de ${person.name} : étudiant MIAGE, Full Stack Engineer, et passionné par la technologie.`,
   tableOfContent: {
     display: true,
